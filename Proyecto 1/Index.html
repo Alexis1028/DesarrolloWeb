@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseñador Freelancer</title>
+    <link rel="stylesheet" href="/CSS/normalize.css"> 
+    <link rel="preload" href="/CSS/normalize.css" as="styles"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="CSS/Styles.css" as="styles"/> <!--Para cargar mas rapido las paginas-->
+    <link href="CSS/Styles.css" rel="stylesheet"/><!--Para enlazar la hoja de estilos-->
+</head>
+
+<body> 
+
+    <header> <!--Sirve para definir la parte superior de la pagina-->
+        <h1 class="titulo">Alexis Campechano <span>Freelancer</span></h1> <!--El span no hace nada mas que agregar un etiqueta-->
+    </header>
+
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor"> <!--Sirve para crear la navegacion de una pagina web-->
+            <a href="#"> Inicio</a> <!-- el atributo href se utiliza para crear enlaces-->
+            <a href="#">Sobre Mi</a>
+            <a href="#">Clientes</a>
+            <a href="#">Contactos</a>
+        </nav>
+    </div>
+    
+
+    <!--<img src="/Recursos/hero.jpg"> -Sirve para agregar imagenes y no tiene etiqueta de cierre-->
+    <!--Tiene que llevar src para agregar el lugar o enlace de donde se encuentra la imagen-->
+    
+    <section class="hero"> <!-- Sirve para seccionar partes de las paginas, se coloca siempre que la etiqueta principal sean un headding a excepcion de que sea en contenido principal-->
+        <div class="contenido-hero">
+            <h2>Diseño y Desarrollo web</h2>
+
+            
+            <div class="ubicacion">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFC107" stroke-linecap="round" stroke-linejoin="round" width="88" height="88" stroke-width="1.5">
+                    <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                    <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
+                </svg> 
+
+                <p>Coatzacoalcos, Veracruz</p>
+
+            </div>
+            
+
+            <a class="boton" href="#">Contactar</a>
+        </div>
+    </section>
+
+
+
+    <main class="contenedor sombra"> <!--EL MAIN ES PARA CONTENIDO PRINCIPAL DE LA PAGINA -->
+
+        <h2>Mis servicios</h2>
+
+        <div class="servicios">
+
+            <section class="servicio"> <!--Diseño web-->
+                <h3>Diseño Web</h3>
+
+                <!--Icono paleta-->
+                <div class="iconos">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" width="40" height="40" stroke-width="1.5">
+                        <path d="M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25"></path>
+                        <path d="M8.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                        <path d="M12.5 7.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                        <path d="M16.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                    </svg> 
+                </div>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores excepturi unde aut fugiat iure itaque
+                eligendi in dolorem? Doloremque est omnis, aliquid ipsum officiis eius eaque cumque ipsa quidem blanditiis?</p>
+            </section>
+            
+            <section class="servicio"> <!--Aplicaciones Web-->
+                <h3>Aplicaciones Web</h3>
+
+                <!--Imagen android-->
+                <div class="iconos">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="40" height="40" stroke-width="1.5">
+                        <path d="M4 10l0 6"></path>
+                        <path d="M20 10l0 6"></path>
+                        <path d="M7 9h10v8a1 1 0 0 1 -1 1h-8a1 1 0 0 1 -1 -1v-8a5 5 0 0 1 10 0"></path>
+                        <path d="M8 3l1 2"></path>
+                        <path d="M16 3l-1 2"></path>
+                        <path d="M9 18l0 3"></path>
+                        <path d="M15 18l0 3"></path>
+                    </svg> 
+
+                    <!--Icono apple-->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" width="40" height="40" stroke-width="1.5">
+                        <path d="M8.286 7.008c-3.216 0 -4.286 3.23 -4.286 5.92c0 3.229 2.143 8.072 4.286 8.072c1.165 -.05 1.799 -.538 3.214 -.538c1.406 0 1.607 .538 3.214 .538s4.286 -3.229 4.286 -5.381c-.03 -.011 -2.649 -.434 -2.679 -3.23c-.02 -2.335 2.589 -3.179 2.679 -3.228c-1.096 -1.606 -3.162 -2.113 -3.75 -2.153c-1.535 -.12 -3.032 1.077 -3.75 1.077c-.729 0 -2.036 -1.077 -3.214 -1.077z"></path>
+                        <path d="M12 4a2 2 0 0 0 2 -2a2 2 0 0 0 -2 2"></path>
+                    </svg> 
+                </div>
+
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio dolorum maxime exercitationem facilis,
+                tenetur adipisci rem nisi fugit ipsam rerum odio quas, tempore corporis mollitia laboriosam numquam facere
+                necessitatibus. Aperiam?</p>
+            </section>
+            
+            <section class="servicio"> <!--E-commerce-->
+                <h3>E-commerce</h3>
+
+                <!--Icono card-->
+                <div class="iconos">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" width="40" height="40" stroke-width="1.5">
+                        <path d="M14 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                        <path d="M12 9.765a3 3 0 1 0 0 4.47"></path>
+                        <path d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path>
+                    </svg>
+                </div>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates iusto, non, ipsum suscipit aperiam
+                nesciunt nisi voluptas recusandae eum perferendis inventore quos explicabo cupiditate vero expedita error.
+                Aliquid, voluptatibus nihil?</p>
+            </section>
+        
+        </div> <!--Fin de Class Servicios-->
+
+            <Section>
+                <h2>Contacto</h2>
+                
+                <form class="formulario"> <!--Para crear un formulario-->
+                    <fieldset> <!--Fieldset sirve para agrupar y organizar los campos relacionados de un formulario-->
+                        <legend> <!--Para crear una leyenda en el fieldset-->
+                            Contactános llenando todos los campos
+                        </legend>
+        
+                        <!--El div se usa cuando necesitas un contenedor generico sin importancia semantica-->
+                        <!--Semantica= Que tiene un proposito y significado claro.-->
+                        <div class="contenedor-campos">
+                            <div class="campo"> <!--El div se utiliza solo si necesitas un bloque de diseño sin significado semántico-->
+                                <label> Nombre </label>
+                                <input class="input-text" type="text" placeholder="Tu nombre"/> <!--Input es un dato de entrada y type para poner el tipo-->
+                                <!--El placeholder sirve para poner un texto de fondo para indicar que colocar ahi-->
+                            </div>
+                            
+                            <div class="campo">
+                                <label>Teléfono</label>
+                                <input class="input-text" type="tel" placeholder="Tu telefono"/>
+                            </div>
+            
+                            <div class="campo">
+                                <label>Correo</label>
+                                <input class="input-text" type="mail" placeholder="Tu correo"/>
+                            </div>
+            
+                            <div class="campo">
+                                <label>Mensaje</label>
+                                <textarea class="input-text"></textarea>
+                            </div>
+                        </div> <!--Contenedor campos fi-->
+                        
+                        <div class="alinear-derecha flex">
+                            <input class="boton w-sm-100" type="submit" value="enviar"> <!--Este type sirve para crear un boton-->
+                        </div>
+                        
+                    </fieldset>
+                </form>
+        
+            </Section>
+            
+    </main>
+
+    
+    
+
+    <footer class="footer"> <!--Sirve para marcar la parte inferior de una pagina-->
+        <p>Todos los derechos reservados. Alexis Campechano</p>
+    </footer>
+
+</body>
+
+</html>

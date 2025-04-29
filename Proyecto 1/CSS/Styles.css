@@ -1,0 +1,452 @@
+:root {
+    --blanco: #FFFFFF;
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris:#757575;
+} 
+
+/* Globale */ 
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory ; /*general scroll */
+}
+
+/*Scroll Snap*/
+.servicios, 
+.navegacion-principal,
+.formulario {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+} /* Parte del box sizing */
+
+
+body {
+    font-size: 16px;
+    font-family:"Krub", serif; /* Define el tipo de fuente */
+    background-image: linear-gradient(to top, #dfe9f3 0%, var(--blanco) 100%);
+}
+/* Esto hace que 1rem = 10px */
+
+.contenedor {
+    max-width: 120rem; /* max-width es para marcar un limite */
+    margin: 0 auto;
+}
+
+.contenedor h2 {
+    text-align: center;
+}
+
+.boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius:.5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        width: auto;
+    }
+}
+
+.boton:hover {
+    cursor: pointer;
+}
+
+.sombra {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+
+
+/* Tipografia */
+h1 {
+    font-size:3.8rem; /* Tamaño de la letra */
+    
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+/* Titulos */ 
+.titulo {
+    text-align: center; /* Alineacion de texto */
+    
+}
+
+.titulo span {
+    font-size: 2rem;
+}
+
+/* UTILIDADES */ 
+.w-sm-100 {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .w-sm-100 {
+        width: auto;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.alinear-derecha {
+    justify-content: flex-end;
+}
+
+
+
+/* Navegacion Principal */
+.nav-bg {
+    background-color:var(--secundario); /*Se coloca color de fondo */
+}
+
+
+.navegacion-principal  {
+   display: flex; /*Activa Flexbox */
+   flex-direction: column;
+   align-items: center ;
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.navegacion-principal a {
+    display: block;
+    color: var(--blanco);
+    text-decoration: none; /* Elimina el diseño del texto */  
+    font-size: 2rem; /* cambia el tamaño de la letra */ 
+    font-weight: 700; /* Para especificar lo grueso de la letra */
+    padding: 1rem;
+}
+
+.navegacion-principal a:hover {  /*El hover en CSS es una pseudo-clase
+     que permite aplicar estilos específicos a un elemento cuando el 
+     usuario pasa el cursor del ratón sobre él. */
+    background-color: var(--primario);
+    color: var(--oscuro)
+}
+
+/* Hero */
+.hero {
+    background-image: url(../Recursos/hero.jpg); /* Agregar imagenes con CSS*/
+    background-repeat: no-repeat; /* Para no repetir imagenes */
+    background-size: cover; /* Definir el tamaño*/
+    height: 450px;
+    position: relative; /* Siempre que quiera tener un hijo el posicion absoluta tengo 
+    que poner al padre en posicion relative */ 
+    margin-bottom: 2rem;
+}
+
+.contenido-hero {
+    position: absolute;
+    /* background-color: rgba(0, 0, 0, 0.6); */
+    background-color: rgb( 0 0 0 / 70%); /* Nuevo modo */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-hero h2,
+.contenido-hero p {
+    color: var(--blanco)
+}
+
+.ubicacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* Servicios */
+
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* acomoda de izquierda a derecha el contenido como se lo pidas */ 
+        column-gap: 1rem; /* Para alinear contenido*/
+    }
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3 {
+    color: var(--secundario);
+    font-weight: 400;
+}
+
+.servicio p {
+    line-height: 2; /* interlineado */
+    text-align: center; /* alinear texto */
+}
+
+.servicio .iconos {
+    height: 15rem; /* altura */
+    width: 15rem; /* anchura */
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex; /* trae flex direction row por defecto */
+    justify-content: space-evenly; /* HORIZONTAL */
+    align-items: center; /* VERTICAL */
+}
+
+/* CONTACTO */
+
+.formulario {
+    background-color: var(--gris);
+    width: min(60rem, 100%); /* Anchura / min usa el tamaño minimo */
+    margin: 0 auto; 
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset {
+    /* El fieldset es el cuadro automatico que se hace del formulario */
+    border: none;
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--primario);
+}
+
+
+@media (min-width: 768px) {
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: 50% 50%; /* columnas - vertical*/
+        grid-template-rows: auto auto 20rem; /* filas * horizontal */
+        column-gap: 1rem;
+
+    }
+
+    .campo:nth-child(3), 
+    .campo:nth-child(4) {
+        grid-column: 1 / 3;
+    }
+    
+}
+
+
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    color: var(--blanco);
+    font-weight:bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.campo textarea {
+    height: 18rem;
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem; /* box model */
+    border-radius: .5rem;
+}
+
+.footer {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/* CSS FUNCIONA ASIGNANDO LA PROPIEDA SEGUIDO DEL VALOR
+    ESTRUCTURA: [PROPIEDAD]:[VALOR]; 
+
+ Especificidad en CSS 
+Es como el navegador va a mostrar el CSS de acuerdo a que tan especifico es
+el selector que hemos creado.
+CSS es en cascada, eso no significa que si un selector aparece después será
+tomado en cuenta sino más bien su especificidad.
+
+
+Selectores en CSS - Selecciona uno o multiples elementos
+
+1. Selector de Elemento: 
+Seleccionara un elemento en base a su etiqueta: 
+Example:
+    p {
+        color: blue;
+    }
+
+2. Selector de Clase:
+Una clase que se puede crear multiples veces (es reutilizable)
+e inicia con un punto. Example: 
+    .cliente {
+        color: blue;
+    }
+
+3. Selector de ID:
+Puedes tener multiples ID's por pagina pero sus nombre no pueden repetirse
+Example: 
+    #cliente {
+        color: blue;
+    }
+    
+4. Selector de atributo: 
+Selecciona elementos basado en algun atributo que tenga.
+Example: 
+    [src="logo.jpg"] {
+        color: blue;
+    }
+
+5. Combinacion de descendentes: 
+Selecciona los elementos hijos cuyo padre sea una clase (o ID)
+en especifico.
+Example: 
+    .cliente .nombre {
+        color: blue;
+    }
+
+6. Todo los hijos: 
+Aplica la siguiente regla a todos los parrafos hijos.
+    .cliente > p {
+        color: blue;
+    } 
+
+Colores en CSS 
+- Por nombre, es decir: 
+color: blue; 
+color: black;
+También HEX: #000 O #000000
+o por rgb() o hsl() 
+Si quieres usar transparencia existe rgba() y hsla(). 
+
+Display Block o Inline: 
+Algunos elementos se muestran de una forma y otros de otra.
+
+display: block; significa que el elemento se colocara uno debajo del otro
+sin importar su tamaño o contenido.
+
+display: inline; Significa que el elemento se posicionará a la derecha
+una vez que haya tomado el espacio que se requiere.
+
+FLEXBOX:
+
+El flexbox se activa en la raiz/el padre de lo que queremos alinear
+Flexbox fue diseñado como un modelo unidimensional para crear layouts
+En flexbox solo puedes colocar y distribuir tus elementos en una 
+direccion fila(row) o columna(column)
+
+row es aplicado por default al definir un display:flex;
+Los otros valores son row-reverse, column y column-reverse
+
+Si elegimos row o row-reverse los elementos hijos se colocaran de izq a der.
+uno junto al otro
+
+Al elegir column o column-reverse los elementos se colocaran de arriba hacia abajo
+Flexbox es especialmente diseñado para alinear elementos en tus diseños
+
+Justify-content es para row 
+align-items es para column
+
+Diferentes estilos para escribir CSS
+Como escribir codigo CSS?
+Existen diferentes formas de escribir codigo CSS: 
+BEM, Utility First o Modulo
+Si el proyecto tiende a ser grande es buena idea
+utilizar cualquiera de los 3
+
+BEM: Bloques, Elementos, Modificadores
+Ejemplo
+.card {}
+.card__titulo {}
+.card__imagen {}
+.card__boton {}
+.card__boton--activo {}
+
+Utility First
+Ejemplo
+.text-center {}
+.color-red-100 {}
+.bg-blue-200 {}
+.p-2 {}
+.m-2 {}
+
+Modulos
+Ejemplo
+.card {}
+.card h2 {}
+.card img {}
+.card a {}
+
+Que es Responsive Web Desing? 
+Media Queries
+Sintaxis: 
+@media (min-width:768px) {
+}
+@media (min-width: 992px) {
+}
+
+Estandares de MQ
+480px para telefono
+768px cuando es una tablet 
+1140px Laptop y computadora
+1440px ==
+
+CSS Box Model 
+Todo en CSS es una caja, la forma de la caja depende de 4 cosas
+Que es CSS Box Model?
+El tamaño de lo que se muestra en pantalla esta delimitado por 
+4 cosas: tamaño de contenido, tamaño de relleno(padding), tamaño del bolde
+y el margen.
+
+CSS GRID 
+Permite definir la ubicacion y tamaño de los elementos de tu sitio web
